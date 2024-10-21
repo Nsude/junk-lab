@@ -2,6 +2,7 @@
 @use "mixins" as *;
 
 body {
+  background-color: white;
   font-size: $header;
   letter-spacing: 0.02ch;
   font-family: "HaasBold";

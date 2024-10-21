@@ -1,0 +1,20 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.cursor-tracker {
+  display: none;
+  position: fixed;
+  aspect-ratio: 1 / 1;
+  background-color: $off-white;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+@include apply-from(desktop) {
+  .cursor-tracker {
+    display: block;
+  }
+}

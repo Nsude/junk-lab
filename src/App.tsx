@@ -1,8 +1,9 @@
+import CursorTracker from "./components/utils/CursorTracker"
 
 function App() {
   return (
     <>
-      You got bare trust issues mate!
+      <CursorTracker />
     </>
   )
 }
