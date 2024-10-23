@@ -2,12 +2,17 @@
 @use "mixins" as *;
 
 body {
-  background-color: white;
-  font-size: $header;
-  letter-spacing: 0.02ch;
+  background-color: $alice-blue;
+  font-size:200px;
+  color: $black;
+  letter-spacing: -0.05ch;
   font-family: "HaasBold";
   overflow-x: hidden;
   margin: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 p {

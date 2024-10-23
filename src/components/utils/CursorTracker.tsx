@@ -4,13 +4,15 @@ import useMousePos from "../../hooks/useMousePos";
 import gsap from "gsap";
 
 const CursorTracker = () => {
-  const [trackerSize, setTrackerSize] = useState(15);
+  const [trackerSize, setTrackerSize] = useState(0);
   const mousePos = useMousePos();
   const cursorRef = createRef<HTMLDivElement>();
 
-  // grow cursor tracker on showcase
+  
+  // hide cursor tracker on some elems
+  const elemClass = "";
   const growTrackerOnShowcase = (elem: Element) => {
-    if (elem.classList.contains("image-container") || elem.classList.contains("image-blur-mask")) {
+    if (elem.classList.contains(elemClass)) {
       gsap.to(".cursor-tracker", {
         opacity: 0,
         duration: 0,
@@ -21,7 +23,7 @@ const CursorTracker = () => {
   };
 
   const resetTracker = () => {
-    setTrackerSize(15);
+    setTrackerSize(12);
     gsap.to(".cursor-tracker", {
       opacity: 1,
       duration: 0,
