@@ -1,0 +1,34 @@
+@use "variables" as *;
+
+.button-solid-overlay {
+  position: relative;
+  padding: 20px 50px;
+  background-color: var(--bg, $green);
+  color: var(--fg, $black);
+  border-radius: 50px;
+  border: none;
+  overflow: hidden;
+  font-size: 30px;
+
+  .arrow-con {
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .arrow-con, span:not(.overlay) {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .overlay {
+    position: absolute;
+    left: 0px;
+    top: -5px;
+    height: 120%;
+    width: 120%;
+    background-color: var(--overlay, $black);
+    z-index: 1;
+    border-radius: 30px;
+    clip-path: circle(0% at 50% 50%);
+  }
+}

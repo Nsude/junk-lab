@@ -1,7 +1,8 @@
 import { useState } from "react";
 import useCustomEffect from "./useCustomEffect";
 
-const useMousePos = (relativeElement?: Element | null) => {
+const useMousePos = (elemClass?: string) => {
+  const relativeElement = document.querySelector(`.${elemClass}`);
   const [mousePos, setMousePos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
   useCustomEffect(() => {
